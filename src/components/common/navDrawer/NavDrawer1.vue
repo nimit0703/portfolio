@@ -43,10 +43,3 @@ const openHome = () => {
 
 }
 </script>
-
-
-<style>
-.mar-l-15 {
-    margin-left: 15%
-}
-</style>
