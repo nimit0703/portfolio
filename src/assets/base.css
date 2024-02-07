@@ -73,7 +73,3 @@ body {
 .mar-l-15 {
   margin-left: 15%
 }
-
-.v-list-item:hover{
-  background-color: rgba(255, 192, 203, 0.265);
-}

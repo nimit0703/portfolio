@@ -6,6 +6,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import './assets/main.css'
 import 'leaflet/dist/leaflet.css';
 import 'leaflet';
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/styles';
+
 
 import vuetify from "./plugins/vuetify";
 
