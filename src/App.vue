@@ -1,22 +1,16 @@
 <template>
-  <v-app>
-    <!-- Your app content -->
-    <NavDrawer1></NavDrawer1>
-    <!-- <v-switch v-model="selectedTheme" hide-details inset :label="selectedTheme ? 'light' : 'dark'" @change="handleThemeChange"></v-switch> -->
+  <v-app :class="`bg-${currentTheme}`" class="">
+    <div class="container">   
+      <Navbar/>
+      <div class="">
+        <RouterView class=""/>
+      </div>
+     </div>
   </v-app>
-</template>
+</template><script setup lang="ts">
+import Navbar from '@/components/common/nav/Navbar.vue'
+import {useStore } from 'vuex';
+const store = useStore();
 
-<script setup lang="ts">
-import NavDrawer1 from '@/components/common/navDrawer/NavDrawer1.vue'
-import { ref } from 'vue';
-import { useTheme } from 'vuetify';
-
-const selectedTheme = ref(false);
-const theme = useTheme();
-
-const handleThemeChange = () => {
-  theme.global.name.value = selectedTheme.value ? 'dark' : 'light';
-  console.log('Theme switched to:', theme.global.name.value);
-};
-
+const currentTheme = store.getters.currentTheme;
 </script>

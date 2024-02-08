@@ -1,6 +1,6 @@
 // YourVueComponent.vue
 <template>
-    <div style="height:600px; width:800px">
+    <div style="height:400px; width:800px">
         <p>vue-leaflet SSR Demo</p>
         <l-map :use-global-leaflet="false" :options="mapOptions">
             <l-tile-layer :url="tileLayerUrl" :attribution="tileLayerAttribution" />
