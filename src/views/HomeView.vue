@@ -6,7 +6,7 @@
       </h3>
     </div>
     <div class="row">
-      <div class="bio-section col-9">
+      <div class="bio-section col-8">
         <div class="row bio-card col-12">
           <div class="bio-img col-4 d-flex justify-content-center border-5 border-success">
             <img src="/images/avtar_img.png" class="img-logo">
