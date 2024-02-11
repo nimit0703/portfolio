@@ -1,5 +1,5 @@
 <template>
-    <div class="sticky-top" :class="`bg-${currentTheme}`" >
+    <div class="sticky-top" :class="currentTheme" >
         <nav class="navbar border-bottom border-1">
             <span class="poppins-regular fs-3" > Nimit</span>
             <div class="d-flex">
@@ -14,7 +14,7 @@ import { ref } from 'vue';
 import {useStore } from 'vuex';
 const store = useStore();
 
-const currentTheme = store.getters.currentTheme;
+const props = defineProps(['currentTheme']);
 
 
 

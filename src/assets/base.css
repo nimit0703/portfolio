@@ -73,3 +73,10 @@ body {
 .mar-l-15 {
   margin-left: 15%
 }
+
+.text-gradient-gb{
+  background: -webkit-linear-gradient(45deg,#3BF686, #4CA9FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}

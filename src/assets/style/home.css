@@ -1,0 +1,29 @@
+.introDes{
+    margin: 7vh 0 ;
+}
+.bio-img{
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    
+}
+.bio-section{
+    padding: 1%;
+}
+.bio-card{
+}
+.img-logo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: -10px;
+}
+.bio-text{
+    margin-top: 2vh;
+    margin-left: 3vw;
+}
