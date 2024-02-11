@@ -15,6 +15,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 1.7em;
+  transition: background-color 0.3s ease; /* Add smooth transition for background-color */
+
+}
+.swiper-slide:hover {
+    background:linear-gradient(45deg,#3bf6866e, #4ca8ff60);
 }
 
 .swiper-slide img {

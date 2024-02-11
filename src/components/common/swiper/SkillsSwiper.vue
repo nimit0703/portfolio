@@ -9,7 +9,7 @@
         :spaceBetween="30"
         :navigation="false"
         :modules="modules"
-        :autoplay="{ delay: 400 }"
+        :autoplay="{ delay: 700 }"
         class="mySwiper"
       >
         <SwiperSlide v-for="(slide, index) in slides" :key="index">
