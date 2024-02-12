@@ -30,7 +30,7 @@
     <div class="row">
       <div class="col-4 d-flex flex-column">
         <div class="">
-          <p class="text-title"></p> What i do?
+          <p class="text-title">What i do?</p> 
         </div>
         <div class="mt-3">
           <p class="text-gray">
@@ -56,28 +56,10 @@
         </div>
       </div>
     </div>
-
-    <!-- <Swiper
-      ref="swiperRef"
-      :slidesPerView="3.5"
-      :centeredSlides="true"
-      :spaceBetween="30"
-      :navigation="true"
-      :modules="modules"
-      :autoplay="{
-          delay:400,
-          disableOnInteraction: false,
-        }"
-      class="mySwiper"
-    >
-      <SwiperSlide class="">
-        <img src="/images/vue-dot-js.svg">
-      </SwiperSlide>
-    </Swiper> -->
-    <!-- End Swiper component -->
-
-    <!-- <p class="append-buttons"></p> -->
     <SkillsSwiper></SkillsSwiper>
+    <p class="text-title mt-5 mb-5">Featured Projects</p>
+    <feature-project></feature-project>
+    <p class="text-title mt-5 mb-5">Code Snippet</p>
   </div>
 </template>
   
@@ -85,16 +67,7 @@
 import { intro } from '@/module/constant/constant.ts'
 import SkillCardHome from "@/components/common/cards/SkillCardHome.vue";
 import SkillsSwiper from "@/components/common/swiper/SkillsSwiper.vue"
-import 'swiper/css';
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import '@/assets/style/swiper.css'
-import { Pagination, Navigation , Autoplay} from 'swiper/modules';
-
-const modules = [Pagination, Navigation, Autoplay];
-
+import FeatureProject from "@/components/section/cards/FeatureProject.vue";
 </script>
 <style>
 </style>
