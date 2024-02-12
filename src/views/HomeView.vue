@@ -60,6 +60,7 @@
     <p class="text-title mt-5 mb-5">Featured Projects</p>
     <feature-project></feature-project>
     <p class="text-title mt-5 mb-5">Code Snippet</p>
+    <code-snippet></code-snippet>
   </div>
 </template>
   
@@ -68,6 +69,7 @@ import { intro } from '@/module/constant/constant.ts'
 import SkillCardHome from "@/components/common/cards/SkillCardHome.vue";
 import SkillsSwiper from "@/components/common/swiper/SkillsSwiper.vue"
 import FeatureProject from "@/components/section/cards/FeatureProject.vue";
+import CodeSnippet from '@/components/section/cards/CodeSnippet.vue';
 </script>
 <style>
 </style>

@@ -1,18 +1,10 @@
 <template>
     <div class="">
-        <div class="container mb-5" v-for="i in 2">
+        <div class="container mb-5">
             <div class="row">
-                <div class="col-5">
-                    <div class="img-div">
-                        <img src="/images/goku.jpg">
-                    </div>
-                </div>
-                <div class="col-5">
-                    <div class="d-flex flex-column">
-                        <p class="text-semi-title m-0 p-0">
-                            Project domain
-                        </p>
-                        <p class="text-title">
+                <div class="col-5 mycard m-3" v-for="i in 4">
+                    <div class="d-flex flex-column p-2">
+                        <p class="text-title fs-4">
                             Project domain
                         </p>
                         <p class="text-gray">
@@ -20,10 +12,21 @@
                             autem unde dicta ducimus. Vel, nobis perferendis.
                         </p>
                         <p class="tabs text-gradient-gb">
-                            <span class="mr-2"> Vue</span>
-                            <span class="mr-2"> VueX</span>
-                            <span class="mr-2"> Vuetify</span>
-                            <span class="mr-2"> Axios</span>
+                            <span class="mr-2">
+                                <img src="/images/vue.svg">
+                            </span>
+                            <span class="mr-2">
+                                <img src="/images/angular.svg">
+                            </span>
+                            <span class="mr-2">
+                                <img src="/images/vuetify.svg">
+                            </span>
+                            <span class="mr-2">
+                                <img src="/images/java.svg">
+                            </span>
+                            <span class="mr-2">
+                                <img src="/images/bootstrap.svg">
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -36,7 +39,12 @@
     </div>
 </template>
   
-<style scoped></style>
+<style scoped>
+img {
+    width: 30px;
+    height: 30px;
+}
+</style>
 
 <script setup lang="ts">
 
