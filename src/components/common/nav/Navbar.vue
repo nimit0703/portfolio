@@ -3,8 +3,14 @@
         <nav class="navbar border-bottom border-1">
             <span class="poppins-regular fs-3"> Nimit Trevadiya</span>
             <div class="d-flex">
-                <div class="poppins-light fs-6 p-4" v-for="(tabValue, tabIndex) in tabs" :key="tabIndex">{{ tabValue }}
-                </div>
+            <router-link 
+                v-for="(tabValue, tabIndex) in tabs" 
+                :key="tabIndex" 
+                :to="{ name: tabValue.toLowerCase() }" 
+                :class="currentTheme=='dark'?'text-light':'text-dark'"
+                class="poppins-light fs-6 p-4">
+                {{ tabValue }}
+            </router-link>
                 <div class="d-flex align-items-center justify-content-between">
                     <i class="bi mr-2 fs-4" :class="currentTheme == 'light' ? 'bi-sun-fill' : 'bi-moon-stars-fill'"></i>
                     <v-switch v-model="selectedTheme" 
@@ -35,7 +41,7 @@ const handleThemeChange = () => {
 const tabs = ref({
     'homeTab': 'Home',
     'projectsTab': "Projects",
-    'ConnectTab': "Connect",
+    'connectTab': "Connect",
 })
 
 </script>

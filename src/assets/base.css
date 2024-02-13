@@ -93,9 +93,11 @@ body {
 
 .bg-gray{
   background-color: #373d42d4;
+}
+a{
+  text-decoration: none;
 
 }
-
 .text-semi-title{
   font-size: 1.3vw;
   font-weight: 300;

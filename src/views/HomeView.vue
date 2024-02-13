@@ -20,9 +20,9 @@
       <div class="connect-section d-flex flex-column col-3">
         <h6 class="text-title">Let's connect</h6>
         <div class="d-flex mt-4">
-          <i class="bi fs-4 bi-instagram mr-5"></i>
-          <i class="bi fs-4 bi-linkedin mr-5"></i>
-          <i class="bi fs-4 bi-github mr-5"></i>
+          <i class="bi fs-4 bi-instagram mr-5" @click="redirectToSpecificUrl('https://www.instagram.com/nimit.trevadiya3/')"></i>
+          <i class="bi fs-4 bi-linkedin mr-5" @click="redirectToSpecificUrl('https://www.linkedin.com/in/nimittrevadiya/')"></i>
+          <i class="bi fs-4 bi-github mr-5" @click="redirectToSpecificUrl('https://github.com/nimit0703')"></i>
         </div>
       </div>
     </div>
@@ -70,6 +70,10 @@ import SkillCardHome from "@/components/common/cards/SkillCardHome.vue";
 import SkillsSwiper from "@/components/common/swiper/SkillsSwiper.vue"
 import FeatureProject from "@/components/section/cards/FeatureProject.vue";
 import CodeSnippet from '@/components/section/cards/CodeSnippet.vue';
+
+const redirectToSpecificUrl = (specificUrl:string) => {
+    window.open(specificUrl, '_blank');
+}
 </script>
 <style>
 </style>

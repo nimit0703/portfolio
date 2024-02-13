@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AppVue from '@/App.vue'
 import HomeViewVue from '@/views/HomeView.vue'
 import SettingsViewVue from '@/views/SettingsView.vue'
+import NothingToShowVue from '@/components/section/cards/NothingToShow.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -19,7 +20,18 @@ const router = createRouter({
       path:'/settings',
       name: 'settings',
       component : SettingsViewVue
-    }
+    },
+    {
+      path:'/projects',
+      name: 'projects',
+      component : NothingToShowVue
+    },
+    {
+      path:'/connect',
+      name: 'connect',
+      component : NothingToShowVue
+    },
+
   ]
 })
 
