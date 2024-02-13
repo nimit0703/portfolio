@@ -1,5 +1,5 @@
 <template>
-  <v-app :class="themedClass" >
+  <v-app :class="`bg-${themedClass}`" >
     <div class="container">   
       <Navbar class="mb-5" :currentTheme="themedClass"/>
       <div class="mt-5">
@@ -13,5 +13,5 @@ import { computed, ref } from 'vue';
 import {useStore } from 'vuex';
 const store = useStore();
 
-const themedClass = computed(() => `bg-${store.getters.currentTheme}`);
+const themedClass = computed(() => store.getters.currentTheme);
 </script>

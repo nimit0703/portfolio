@@ -40,11 +40,11 @@
     align-items: center;
     OVERFLOW: hidden;
     margin: -25px 0 auto;
-    background-color: #373d42d4;
+    background-color: #434a502e;
 }
 
 .mycard {
-    background-color: #373d42d4;
+    background-color: #434a502e;
     border-radius: 1em;
     transition: background-color 0.3s ease; /* Add smooth transition for background-color */
   }

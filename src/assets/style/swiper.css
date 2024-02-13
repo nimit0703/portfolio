@@ -7,7 +7,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #373d42d4;
+  background: #434a502e;
   transition: transform 0.5s ease; /* Adjust the transition duration and easing function */
   will-change: transform; /* Optimize for smoother animations */
   
