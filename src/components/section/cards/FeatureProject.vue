@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-5">
                     <div class="img-div">
-                        <img src="/images/goku.jpg">
+                        <img src="/images/beach.jpg">
                     </div>
                 </div>
                 <div class="col-5">
