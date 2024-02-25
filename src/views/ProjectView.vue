@@ -29,9 +29,17 @@
 import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
 
+interface Repository {
+  id: number;
+  name: string;
+  topics: string[];
+  description:string;
+  language: string | null; // Assuming language can be null or a string
+}
 const repoNames = ref([]);
-const repos = ref([]);
+const repos = ref<Repository[]>([]);
 const searchedRepo: any = ref();
+
 
 onMounted(async () => {
     try {
