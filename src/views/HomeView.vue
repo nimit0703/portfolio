@@ -1,9 +1,9 @@
 <template>
   <div class="d-flex flex-column">
     <div class="row introDes">
-      <h3 class="col-9 text-gradient-gb poppins-medium text-spacing-3">
+      <h2 class="col-11 text-gradient-gb poppins-medium text-spacing-3" style="letter-spacing: 1px;">
         {{ intro }}
-      </h3>
+      </h2>
     </div>
     <div class="row">
       <div class="bio-section col-8">
