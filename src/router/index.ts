@@ -3,6 +3,7 @@ import AppVue from '@/App.vue'
 import HomeViewVue from '@/views/HomeView.vue'
 import SettingsViewVue from '@/views/SettingsView.vue'
 import NothingToShowVue from '@/components/section/cards/NothingToShow.vue'
+import ProjectViewVue from '@/views/ProjectView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -24,7 +25,7 @@ const router = createRouter({
     {
       path:'/projects',
       name: 'projects',
-      component : NothingToShowVue
+      component : ProjectViewVue
     },
     {
       path:'/connect',
