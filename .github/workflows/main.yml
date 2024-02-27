@@ -1,0 +1,55 @@
+name: CI/CD for Vue.js
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build and test
+      run: npm run build
+
+  deploy-development:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Deploy to development
+      if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
+      run: |
+        # Add your development deployment steps here
+        # Example: Deploy to a development server
+
+  deploy-staging:
+    runs-on: ubuntu-latest
+    needs: deploy-development
+    steps:
+    - name: Deploy to staging
+      if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+      run: |
+        # Add your staging deployment steps here
+        # Example: Deploy to a staging environment
+
+  deploy-Production:
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    steps:
+    - name: Deploy to Production
+      if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+      run: |
+        # Add your Production deployment steps here
+        # Example: Deploy to a Production server
