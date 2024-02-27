@@ -13,12 +13,12 @@
                     <p class="text-center fs-6">{{ repo.name }}</p>
                     <p class="desc-text text-center" :style="getDescriptionStyle">{{ repo.description ? repo.description :
                         'No description was added' }}</p>
-                    <p class="float-right">
-                        <i class="bi bi-arrow-up-right-square fs-5"></i>
-                    </p>
                     <p v-if="repo.topics" class="text-center overflow-hidden">
-                        <span v-for="(topic, i) in repo.topics" :key="i" class="mx-2" style="color: #3BF686; opacity: 0.7;">
+                        <span v-for="(topic, i) in repo.topics" :key="i" class="mx-2" style="opacity: 0.7;">
                             {{ topic }}</span>
+                    </p>
+                    <p class="text-center">
+                        <i class="bi bi-arrow-up-right-square fs-5"></i>
                     </p>
                 </div>
             </div>
@@ -29,12 +29,12 @@
                     <p class="text-center fs-6">{{ repo.name }}</p>
                     <p class="desc-text text-center" :style="getDescriptionStyle">{{ repo.description ? repo.description :
                         'No description was added' }}</p>
-                    <p class="float-right">
-                        <i class="bi bi-arrow-up-right-square fs-5"></i>
-                    </p>
                     <p v-if="repo.topics" class="text-center text-wrap overflow-hidden">
-                        <span v-for="(topic, i) in repo.topics" :key="i" class="mx-2" style="color: #3BF686; opacity: 0.7;">
+                        <span v-for="(topic, i) in repo.topics" :key="i" class="mx-2" style=" opacity: 0.7;">
                             {{ topic }}</span>
+                    </p>
+                    <p class="text-center">
+                        <i class="bi bi-arrow-up-right-square fs-5"></i>
                     </p>
                 </div>
             </div>
@@ -45,12 +45,12 @@
                     <p class="text-center fs-6">{{ repo.name }}</p>
                     <p class="desc-text text-center" :style="getDescriptionStyle">{{ repo.description ? repo.description :
                         'No description was added' }}</p>
-                    <p class="float-right">
-                        <i class="bi bi-arrow-up-right-square fs-5"></i>
-                    </p>
                     <p v-if="repo.topics" class="text-center overflow-hidden">
-                        <span v-for="(topic, i) in repo.topics" :key="i" class="mx-2" style="color: #3BF686; opacity: 0.7;">
+                        <span v-for="(topic, i) in repo.topics" :key="i" class="mx-2" style="opacity: 0.7;">
                             {{ topic }}</span>
+                    </p>
+                    <p class="text-center">
+                        <i class="bi bi-arrow-up-right-square fs-5"></i>
                     </p>
                 </div>
             </div>
@@ -64,7 +64,6 @@
 import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
 import store from '@/store/store';
-import type { StringMappingType } from 'typescript';
 
 interface Repository {
     id: number;
@@ -129,59 +128,22 @@ const filteredRepos = computed(() => {
 </script>
   
 <style scoped>
-.row {
-    display: flex;
-    /* flex-wrap: wrap;
-    flex-direction: column; */
-    padding: 0 4px;
-}
-
 .desc-text {
     color: antiquewhite;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
-    flex: 100%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-.bottom-right {
-    position: absolute;
-    /* Set the positioned element to absolute position */
-    bottom: 0;
-    /* Align to the bottom */
-    right: 0;
-    /* Align to the right */
-    margin: 0;
-    /* Optional: Remove any default margin */
-}
 
 i {
-    margin-top: 10px;
+    margin-top: -20px;
     visibility: hidden;
 }
 
-/* Set the visibility to visible when hovering over the column */
-.column:hover i {
+.mycard:hover i {
     visibility: visible;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
-}
+@media screen and (max-width: 800px) {}
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
-    }
-}
+@media screen and (max-width: 600px) {}
 </style>
   
