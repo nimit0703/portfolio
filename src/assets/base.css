@@ -104,3 +104,15 @@ a{
   color: #939393;
 
 }
+@media screen and (max-width: 767px) {
+  .text-title {
+    font-size: 20px; /* Adjust font size for small screens */
+    text-align: center;
+  }
+
+  .connection-icons{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+  }
+}
