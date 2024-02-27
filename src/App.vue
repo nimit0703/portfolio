@@ -1,6 +1,7 @@
 <template>
   <v-app :class="`bg-${themedClass}`">
     <div class="container">
+      <h1>Nimit testing workflow</h1>
       <Navbar class="mb-5" :currentTheme="themedClass" />
       <div class="mt-5">
         <RouterView class="" />
