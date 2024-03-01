@@ -24,6 +24,7 @@ export const mapConfig = {
   mapOptions: {
     center: [22.3072, 73.1812], // Center on Vadodara
     zoom: 10, // Adjust the zoom level as needed
+    zoomControl: false
   },
   tileLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
   tileLayerAttribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
