@@ -10,6 +10,7 @@
             :key="tabIndex"
             :to="{ name: tabValue.toLowerCase() }"
             :class="currentTheme=='dark'?'text-light':'text-dark'"
+            exact-active-class="text-gradient-gb fs-4"
             class="poppins-light fs-6 p-4"
           >
             {{ tabValue }}

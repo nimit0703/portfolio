@@ -9,7 +9,7 @@
       <div class="bio-section col-lg-8 col-md-8 col-12">
         <div class="row bio-card col-12">
           <div class="bio-img col-4 d-flex justify-content-center border-5 border-success">
-            <img src="/images/my-avtar2.png" class="img-logo">
+            <img src="/images/my-avtar3.png" class="img-logo">
           </div>
           <div class="bio-text col-6 d-flex flex-column">
             <p class="text-title">Biography</p>
