@@ -17,13 +17,12 @@
 }
 .bio-card{
 }
-.img-logo{
-    width: 130px;
-    height: 130px;
+.img-logo{    
+    width: 160px;
+    height: 135px;
     border-radius: 50%;
-    margin-top: -10px;
-    margin-left: -10px;
-    transform: rotate(3deg);
+    margin-top: -8px;
+    margin-left: 11px;
 }
 .bio-text{
     margin-top: 2vh;
