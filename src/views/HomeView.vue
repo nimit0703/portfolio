@@ -13,7 +13,7 @@
           </div>
           <div class="bio-text col-6 d-flex flex-column">
             <p class="text-title">Biography</p>
-            <p class="text-gray">{{ intro }}</p>
+            <p class="text-gray">{{ biograpyText }}</p>
           </div>
         </div>
       </div>
@@ -34,23 +34,17 @@
         </div>
         <div class="mt-3">
           <p class="text-gray">
-            {{ intro }}
+            {{ whatIDo }}
           </p>
         </div>
       </div>
       <div class="col-lg-8 col-md-8 col-12 p-2">
         <div class="container">
           <div class="row ">
-            <SkillCardHome 
-            :icon="'bi bi-github'"
-            :title="'front-end'"
-            :desc="intro"
-            ></SkillCardHome>
-            
-            <SkillCardHome
-            :icon="'bi bi-github'"
-            :title="'front-end'"
-            :desc="intro"
+            <SkillCardHome v-for="(skill,index) in skillCard" 
+            :icon="skill.icon"
+            :title="skill.title"
+            :desc="skill.desc"
             ></SkillCardHome>
           </div>
         </div>
@@ -65,7 +59,7 @@
 </template>
   
 <script setup lang="ts">
-import { intro } from '@/module/constant/constant.ts'
+import { intro, skillCard, whatIDo, biograpyText } from '@/module/constant/constant.ts'
 import SkillCardHome from "@/components/common/cards/SkillCardHome.vue";
 import SkillsSwiper from "@/components/common/swiper/SkillsSwiper.vue"
 import FeatureProject from "@/components/section/cards/FeatureProject.vue";

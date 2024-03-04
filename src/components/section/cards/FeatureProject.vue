@@ -1,29 +1,25 @@
 <template>
     <div>
-        <div class="container mb-5" v-for="i in 2">
-            <div class="row">
-                <div class="col-md-5">
+        <div class="container mb-5" v-for="(project,index) in featuredProjects" >
+            <div class="row flex-column-reverse flex-md-row">
+                <div class="col-md-5 col-sm-12 order-md-1 order-2">
                     <div class="img-div">
-                        <img src="/images/beach.jpg" class="img-fluid" alt="Project Image">
+                        <img :src="`/images/${project.img}`" class="img-fluid" alt="Project Image">
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7 col-sm-12 order-md-2 order-1">
                     <div class="d-flex flex-column">
                         <p class="text-semi-title m-0 p-0">
-                            Project domain
+                            {{project.title}}
                         </p>
                         <p class="text-title">
-                            Project domain
+                            {{project.domain}}
                         </p>
                         <p class="text-gray">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis recusandae animi, mollitia illo
-                            autem unde dicta ducimus. Vel, nobis perferendis.
+                            {{ project.desc }}
                         </p>
                         <p class="tabs text-gradient-gb">
-                            <span class="mr-2"> Vue</span>
-                            <span class="mr-2"> VueX</span>
-                            <span class="mr-2"> Vuetify</span>
-                            <span class="mr-2"> Axios</span>
+                            <span class="mr-2" v-for="tag in project.tags"> {{ tag }}</span>
                         </p>
                     </div>
                 </div>
@@ -36,6 +32,10 @@
         </div>
     </div>
 </template>
+<script setup lang="ts">
+import {featuredProjects} from '@/module/constant/constant'
+
+</script>
   
 <style scoped>
 /* Add additional responsive styles if needed */
@@ -62,7 +62,4 @@
 }
 </style>
   
-<script setup lang="ts">
-
-</script>
   
