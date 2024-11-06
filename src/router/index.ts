@@ -1,40 +1,39 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import AppVue from '@/App.vue'
-import HomeViewVue from '@/views/HomeView.vue'
-import SettingsViewVue from '@/views/SettingsView.vue'
-import NothingToShowVue from '@/components/section/cards/NothingToShow.vue'
-import ProjectViewVue from '@/views/ProjectView.vue';
-import ConnectViewVue from '@/views/ConnectView.vue'
+// router/index.ts
+
+// Composables
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '@/pages/HomeView.vue';
+
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+  },
+];
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path:'/',
-      name:'default',
-      component:HomeViewVue,
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: HomeViewVue
-    },
-    {
-      path:'/settings',
-      name: 'settings',
-      component : SettingsViewVue
-    },
-    {
-      path:'/projects',
-      name: 'projects',
-      component : ProjectViewVue
-    },
-    {
-      path:'/connect',
-      name: 'connect',
-      component : ConnectViewVue
-    },
+  routes,
+});
 
-  ]
-})
+// Workaround for dynamic import error
+router.onError((err, to) => {
+  if (err?.message?.includes?.('Failed to fetch dynamically imported module')) {
+    if (!localStorage.getItem('vuetify:dynamic-reload')) {
+      console.log('Reloading page to fix dynamic import error');
+      localStorage.setItem('vuetify:dynamic-reload', 'true');
+      location.assign(to.fullPath);
+    } else {
+      console.error('Dynamic import error, reloading page did not fix it', err);
+    }
+  } else {
+    console.error(err);
+  }
+});
 
-export default router
+router.isReady().then(() => {
+  localStorage.removeItem('vuetify:dynamic-reload');
+});
+
+export default router;

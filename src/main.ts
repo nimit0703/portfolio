@@ -1,22 +1,25 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import router from "./router";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import './assets/main.css'
-import 'leaflet/dist/leaflet.css';
-import 'leaflet';
-import '@mdi/font/css/materialdesignicons.css';
-import 'vuetify/styles';
-import store from '@/store/store'
-import vuetify from "./plugins/vuetify";
+/**
+ * main.ts
+ *
+ * Bootstraps Vuetify and other plugins then mounts the App`
+ */
+import "@/assets/css/main.css"
+// Plugins
+import { registerPlugins } from '@/plugins'
+import { store } from './stores/store'
+// Components
+import App from './App.vue'
 
+// Composables
+import { createApp } from 'vue'
+import VueScrollTo from 'vue-scrollto';
 
-const app = createApp(App);
-
-// Use the router
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+const app = createApp(App)
+registerPlugins(app)
+app.use(VueScrollTo);
 app.use(store)
-app.use(router);
-app.use(vuetify)
-app.mount("#app"); // Mount the app after data is loaded
-
+app.mount('#app')
