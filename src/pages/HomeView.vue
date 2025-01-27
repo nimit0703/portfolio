@@ -5,6 +5,7 @@
       <HelloWorld />
       <about />
       <skill />
+      <blog />
       <acomplishments />
       <!-- <cases /> -->
       <contact />
