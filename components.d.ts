@@ -20,5 +20,6 @@ declare module 'vue' {
     Sidebar: typeof import('./src/components/globle/sidebar/Sidebar.vue')['default']
     Skill: typeof import('./src/components/skill.vue')['default']
     TabsComponent: typeof import('./src/components/globle/tabs/TabsComponent.vue')['default']
+    WebGLCanvas: typeof import('./src/components/webGL/WebGLCanvas.vue')['default']
   }
 }

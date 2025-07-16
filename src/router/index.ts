@@ -3,7 +3,7 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/HomeView.vue';
-
+import WebGLCanvas from '@/components/webGL/WebGLCanvas.vue';
 const routes = [
   {
     path: '/',
