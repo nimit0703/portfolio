@@ -1,6 +1,6 @@
 <template>
   <v-container id="welcomeMsg">
-    <v-img
+    <!-- <v-img
       data-aos="fade-in"
       data-aos-offset="1"
       data-aos-delay="50"
@@ -14,7 +14,7 @@
       contain
       gradient="to top right, rgba(0,0,0,.15), rgba(0,0,0,.7)"
       alt="Nimit Trevadiya"
-    >
+    > -->
       <v-img
         class="mt-2"
         src="../assets/ND (2).png"
@@ -65,7 +65,7 @@
           </p>
         </v-col>
       </div>
-    </v-img>
+    <!-- </v-img> -->
     <v-navigation-drawer
       class="px-1"
       id="socials"
