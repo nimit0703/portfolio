@@ -296,7 +296,7 @@ h2 {
   margin-top: 220px;
 }
 #socials {
-  margin-top: 28vh;
+  margin-top: 68vh;
   
 }
 #buttonMain {
