@@ -4,52 +4,15 @@
       data-aos-delay="1" data-aos-duration="600" data-aos-easing="ease-in-out" data-aos-once="true">
       <v-col cols="12" md="11" sm="12">
         <h1 class="pb-15">Education & Experience</h1>
-        <div class="pb-5">
+        <div class="pb-5" v-for="(exp, ei) in experience" :key="ei">
           <div class="d-flex">
-            <a href="https://eroam.com/" target="_blank">
-              <h2 id="links">eRoam Technologies</h2>
+            <a :href="exp.link" target="_blank">
+              <h2 id="links">{{ exp.company }}</h2>
             </a>
-            <h2 class="ml-auto">Software Developer</h2>
+            <h2 class="ml-auto">{{ exp.role }}</h2>
           </div>
-          <span>09.2023 - currently / Gujarat, India</span>
+          <span>{{ exp.duration }} / {{ exp.location }}</span>
         </div>
-        <div class="pb-5">
-          <div class="d-flex">
-            <a href="https://www.agshealth.com/" target="_blank">
-              <h2 id="links">AGS Health PVT. LTD.</h2>
-            </a>
-            <h2 class="ml-auto">Associate Rearch Developer</h2>
-          </div>
-          <span>06.2022 - 08.2023 / Ahmedabad, Gujarat</span>
-        </div>
-        <div class="pb-5">
-          <div class="d-flex">
-            <a href="https://implifie.com/" target="_blank">
-              <h2 id="links">Implifie Technologies</h2>
-            </a>
-            <h2 class="ml-auto">Front-End Developer</h2>
-          </div>
-          <span>04.2021 - 06.2022 / Remote</span>
-        </div>
-        <div class="pb-5">
-          <div class="d-flex">
-            <a href="https://www.svitvasad.ac.in/" target="_blank">
-              <h2 id="links">SVIT, GTU</h2>
-            </a>
-            <h2 class="ml-auto">Bachelor: Computer Eng.</h2>
-          </div>
-          <span>08.2019 - 11.2023 / Gujarat, India</span>
-        </div> 
-        <div class="pb-5">
-          <div class="d-flex">
-            <a href="https://www.svitvasad.ac.in/" target="_blank">
-              <h2 id="links">SVIT, GTU</h2>
-            </a>
-            <h2 class="ml-auto">Placement Coordinator: T&P Cell</h2>
-          </div>
-          <span>08.2021 - 11.2022 / Gujarat, India</span>
-        </div> 
-        
       </v-col>
     </div>
     <!-- <v-col cols="12" md="11" sm="12">
@@ -58,8 +21,52 @@
   </v-container>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { ref } from 'vue';
+const experience = ref([
+  {
+    company: "Digantara",
+    role :"SDE I",
+    location: "Bangalore, India",
+    duration: "09.2025 - currently",
+    link: "https://www.digantara.co.in/"
+  },
+  {
+    company: "eRoam Technologies",
+    role: "Software Developer",
+    duration: "09.2023 - 08.2025",
+    location: "Gujarat, India",
+    link: "https://eroam.com/"
+  },
+  {
+    company: "AGS Health PVT. LTD.",
+    role: "Associate Research Developer",
+    duration: "06.2022 - 08.2023",
+    location: "Ahmedabad, Gujarat",
+    link: "https://www.agshealth.com/"
+  },
+  {
+    company: "Implifie Technologies",
+    role: "Front-End Developer",
+    duration: "04.2021 - 06.2022",
+    location: "Remote",
+    link: "https://implifie.com/"
+  },
+  {
+    company: "SVIT, GTU",
+    role: "Placement Coordinator: T&P Cell",
+    duration: "08.2021 - 11.2022",
+    location: "Gujarat, India",
+    link: "https://www.svitvasad.ac.in/"
+  },
+  {
+    company: "SVIT, GTU",
+    role: "Bachelor: Computer Eng.",
+    duration: "08.2019 - 11.2023",
+    location: "Gujarat, India",
+    link: "https://www.svitvasad.ac.in/"
+  },
+])
 </script>
 
 <style scoped>

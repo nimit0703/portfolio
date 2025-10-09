@@ -8,13 +8,14 @@
         <div class="pb-5 cursor-pointer mb-5" v-for="(blog, index) in blogs" :key="index">
           <v-row @click.prevent="redirect(blog.link)">
             <v-col cols="8">
-              <div class="m-2">
+              <div class="m-2 mb-4">
                 <h2>{{ blog.title }}</h2>
               </div>
-              <span class="mt-2">{{ blog.description }}</span>
+              <span class="mt-4">{{ blog.description }}</span>
             </v-col>
             <v-col cols="4">
               <v-img
+                v-if="blog.image"
                 :width="150"
                 aspect-ratio="16/9"
                 cover
@@ -51,6 +52,13 @@ const blogs = ref([
     link: 'https://nimit0703.medium.com/mastering-reactivity-in-vue-understanding-watch-watcheffect-computed-and-vuex-getters-0f1a56fe3de2',
     image:
       'https://miro.medium.com/v2/resize:fit:720/format:webp/0*yX-t6aaANHC7sjc0.png'
+  },
+  {
+    title: `JavaScript Event Loop : No more confusion`,
+    description:
+      'The JavaScript Event Loop is a fundamental concept that allows for non-blocking I/O operations. Understanding how the event loop works is crucial for building efficient applications.',
+    link: 'https://nimit0703.medium.com/javascript-event-loop-no-more-confusion-5f1a56fe3de2',
+    image:''
   },
   // Add more blogs here
 ]);
